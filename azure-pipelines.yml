@@ -1,0 +1,21 @@
+
+trigger:
+- main
+pool: Hosted Agent
+steps:
+- script: 
+    git clone --branch main https://github.com/moshe322/maven-project-skeleton-with-docker.git
+  displayName: 'cloning code'
+- script: |
+    - task: Maven@4
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'clean package'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        javaHomeOption: 'JDKVersion'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: false
+  displayName: 'Run a multi-line script'
