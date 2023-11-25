@@ -1,7 +1,7 @@
 
 trigger:
 - main
-pool: Hosted Agent
+pool: default
 steps:
 - script: 
     git clone --branch main https://github.com/moshe322/maven-project-skeleton-with-docker.git
