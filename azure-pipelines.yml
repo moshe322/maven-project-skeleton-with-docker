@@ -7,7 +7,7 @@ steps:
     git clone --branch main https://github.com/moshe322/maven-project-skeleton-with-docker.git
   displayName: 'cloning code'
 - script: |
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'maven-project-skeleton-with-docker'
     goals: 'clean package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
