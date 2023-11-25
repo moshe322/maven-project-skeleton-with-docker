@@ -15,6 +15,6 @@ steps:
     goals: 'package'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'maven-project-skeleton-with-docker/target'
+    PathtoPublish: 'target'
     ArtifactName: 'moshe'
     publishLocation: 'Container'
